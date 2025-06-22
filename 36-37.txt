@@ -1,0 +1,18 @@
+static void Main(string[] args)
+{
+    Console.WriteLine("введите строку: ");
+    string input = Console.ReadLine();
+    Console.WriteLine("введите символ, который нужно заменить:");
+    char old = Console.ReadKey().KeyChar;
+    Console.WriteLine(); 
+    Console.WriteLine("введите символ, на который нужно заменить:");
+    char newc = Console.ReadKey().KeyChar;
+    Console.WriteLine();
+    string result = ReplaceChars(input, old, newc);
+    Console.WriteLine("\nрезультат замены:");
+    Console.WriteLine(result);
+}
+static string ReplaceChars(string input, char old, char newc)
+{
+    return input.Replace(old, newc);
+}
